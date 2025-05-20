@@ -1,8 +1,6 @@
 package templates
 
-import "github.com/singh-gur/homepage/templates/pages"
-
-templ Layout(title string, metaTags, bodyContent templ.Component) {
+templ Layout(title string, metaTags, navbar templ.Component, mainContent templ.Component, footer templ.Component) {
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
@@ -25,8 +23,10 @@ templ Layout(title string, metaTags, bodyContent templ.Component) {
 			<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
 			<link href="/static/styles.css" rel="stylesheet"/>
 		</head>
-		<body onload={ pages.BodyScripts() }>
-			@bodyContent
+		<body class="bg-gray-50 text-gray-800">
+			@navbar
+			@mainContent
+			@footer
 			<script src="/static/scripts.js"></script>
 		</body>
 	</html>

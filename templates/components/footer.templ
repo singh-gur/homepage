@@ -1,0 +1,14 @@
+package components
+
+templ Footer(links map[string]string) {
+	<footer class="bg-white border-t border-gray-200 py-6">
+		<div class="max-w-screen-xl mx-auto px-4 text-center">
+			<span class="text-sm text-gray-500">© 2025 <a href="#" class="hover:underline">MySite™</a>. All Rights Reserved.</span>
+			<div class="mt-4 flex justify-center space-x-6">
+				for name, url := range links {
+					<a href={ templ.SafeURL(url) } class="text-gray-500 hover:text-blue-500" target="_blank" rel="noopener">{ name }</a>
+				}
+			</div>
+		</div>
+	</footer>
+}

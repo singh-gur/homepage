@@ -4,6 +4,7 @@ import (
 	"github.com/a-h/templ"
 	"github.com/gofiber/fiber/v2/middleware/adaptor"
 	"github.com/singh-gur/homepage/templates"
+	"github.com/singh-gur/homepage/templates/components"
 	"github.com/singh-gur/homepage/templates/pages"
 
 	"github.com/gofiber/fiber/v2"
@@ -17,16 +18,18 @@ func indexViewHandler(c *fiber.Ctx) error {
 		"gowebly, htmx example page, go with htmx",               // define meta keywords
 		"Welcome to example! You're here because it worked out.", // define meta description
 	)
-	bodyContent := pages.BodyContent(
-		"Welcome to example!",                // define h1 text
-		"You're here because it worked out.", // define p text
-	)
 
+	navbar := components.Navbar([]string{"Home", "About", "Contact"}, "Home") // define navbar items
+	index := pages.Index2Content()
+	footer := components.Footer(map[string]string{
+		"GitHub":   "https://github.com/singh-gur",
+		"LinkedIn": "https://www.linkedin.com/in/gurbakhshish-singh-1b73b177",
+	})
 	// Define template handler.
 	templateHandler := templ.Handler(
 		templates.Layout(
 			"Welcome to example!", // define title text
-			metaTags, bodyContent,
+			metaTags, navbar, index, footer,
 		),
 	)
 

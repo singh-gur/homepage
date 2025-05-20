@@ -3,6 +3,10 @@ install:
     @go mod tidy
     @bun install
 
+
+generate:
+    @templ generate
+
 build:
     @templ generate
     @go build -ldflags="-s -w" -o .bin/homepage

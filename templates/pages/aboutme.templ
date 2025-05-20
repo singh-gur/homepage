@@ -1,0 +1,20 @@
+package pages
+
+
+templ AboutMe(intro []string, socials map[string]string) {
+    <div id="app">
+        <div>
+            <h1>About Me</h1>
+            for _, line := range intro {
+                <p> {line} </p>
+            }
+
+            <p> Please get in touch with me. </p>
+            <ul>
+            for name, url := range socials {
+                <li> <a href={templ.SafeURL(url)} target="_blank">{name}</a></li>
+            }
+            </ul>
+        </div>
+    </div>
+}
