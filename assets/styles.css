@@ -243,6 +243,65 @@ button:focus-visible {
   50% { transform: translateY(-10px); }
 }
 
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Section spacing for fixed navbar */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(51, 65, 85, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.6);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}
+
+/* Modern parallax effect */
+.parallax {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Enhanced glass morphism */
+.glass-enhanced {
+  backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Intersection observer animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Alpine.js styles */
 
 [x-cloak] {

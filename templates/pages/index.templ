@@ -13,13 +13,14 @@ templ HomeBodyContent() {
 	<div id="app">
 		<nav class="navbar navbar-modern fixed top-0 z-50 shadow-2xl">
 			<div class="navbar-start">
-				<a class="btn btn-ghost text-xl" href="/">Gurbakhshish Singh</a>
+				<a class="btn btn-ghost text-xl" href="#home">Gurbakhshish Singh</a>
 			</div>
 			<div class="navbar-center hidden lg:flex">
 				<ul class="menu menu-horizontal px-1">
-					<li><a href="/" class="text-primary font-semibold">Home</a></li>
-					<li><a href="/about" class="hover:text-primary">About</a></li>
-					<li><a href="/projects" class="hover:text-primary">Projects</a></li>
+					<li><a href="#home" class="hover:text-primary smooth-scroll">Home</a></li>
+					<li><a href="#about" class="hover:text-primary smooth-scroll">About</a></li>
+					<li><a href="#projects" class="hover:text-primary smooth-scroll">Projects</a></li>
+					<li><a href="#contact" class="hover:text-primary smooth-scroll">Contact</a></li>
 				</ul>
 			</div>
 			<div class="navbar-end">
@@ -30,16 +31,17 @@ templ HomeBodyContent() {
 						</svg>
 					</div>
 					<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-						<li><a href="/" class="font-semibold">Home</a></li>
-						<li><a href="/about">About</a></li>
-						<li><a href="/projects">Projects</a></li>
+						<li><a href="#home" class="smooth-scroll">Home</a></li>
+						<li><a href="#about" class="smooth-scroll">About</a></li>
+						<li><a href="#projects" class="smooth-scroll">Projects</a></li>
+						<li><a href="#contact" class="smooth-scroll">Contact</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 
 		<!-- Hero Section -->
-		<div class="hero min-h-screen hero-gradient pt-20">
+		<section id="home" class="hero min-h-screen hero-gradient pt-20">
 			<div class="hero-content text-center">
 				<div class="max-w-4xl relative z-10">
 					<div class="avatar mb-8 floating">
@@ -55,13 +57,13 @@ templ HomeBodyContent() {
 						with <strong>Go</strong>, <strong>JavaScript</strong>, and modern technologies.
 					</p>
 					<div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-						<a href="/projects" class="btn btn-primary btn-lg btn-glow glow-primary">
+						<a href="#projects" class="btn btn-primary btn-lg btn-glow glow-primary smooth-scroll">
 							<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14-7l2 2-2 2M5 13l-2-2 2-2"></path>
 							</svg>
 							View My Work
 						</a>
-						<a href="/about" class="btn btn-outline btn-lg btn-glow hover:btn-primary">
+						<a href="#about" class="btn btn-outline btn-lg btn-glow hover:btn-primary smooth-scroll">
 							<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
 							</svg>
@@ -80,10 +82,73 @@ templ HomeBodyContent() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<!-- Featured Projects Section -->
-		<div class="container mx-auto px-4 max-w-6xl py-20">
+		<!-- About Section -->
+		<section id="about" class="py-20 relative">
+			<div class="absolute inset-0 bg-gradient-to-r from-base-200/30 to-base-300/30"></div>
+			<div class="container mx-auto px-4 max-w-4xl relative z-10">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">About Me</h2>
+					<p class="text-xl text-base-content/80 max-w-3xl mx-auto leading-relaxed">
+						I'm a passionate software engineer who loves building scalable web applications 
+						and solving complex problems. With expertise in modern technologies like Go, JavaScript, 
+						and React, I create efficient solutions that make a difference.
+					</p>
+				</div>
+				<div class="grid md:grid-cols-2 gap-12 items-center">
+					<div class="space-y-6">
+						<h3 class="text-2xl font-semibold mb-4">What I Do</h3>
+						<div class="space-y-4">
+							<div class="flex items-start gap-3">
+								<div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+								<p class="text-base-content/80">Design and build full-stack web applications with modern frameworks</p>
+							</div>
+							<div class="flex items-start gap-3">
+								<div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+								<p class="text-base-content/80">Develop high-performance backend services and APIs</p>
+							</div>
+							<div class="flex items-start gap-3">
+								<div class="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+								<p class="text-base-content/80">Implement DevOps practices and cloud infrastructure</p>
+							</div>
+						</div>
+					</div>
+					<div class="glass-card p-8 rounded-2xl">
+						<h3 class="text-2xl font-semibold mb-6">Currently Working With</h3>
+						<div class="grid grid-cols-2 gap-4">
+							<div class="text-center p-4">
+								<div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-2">
+									<span class="text-primary font-bold">Go</span>
+								</div>
+								<p class="text-sm text-base-content/70">Backend</p>
+							</div>
+							<div class="text-center p-4">
+								<div class="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-2">
+									<span class="text-secondary font-bold">JS</span>
+								</div>
+								<p class="text-sm text-base-content/70">Frontend</p>
+							</div>
+							<div class="text-center p-4">
+								<div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-2">
+									<span class="text-accent font-bold">⚡</span>
+								</div>
+								<p class="text-sm text-base-content/70">DevOps</p>
+							</div>
+							<div class="text-center p-4">
+								<div class="w-12 h-12 bg-info/20 rounded-xl flex items-center justify-center mx-auto mb-2">
+									<span class="text-info font-bold">DB</span>
+								</div>
+								<p class="text-sm text-base-content/70">Database</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects" class="container mx-auto px-4 max-w-6xl py-20">
 			<div class="text-center mb-16">
 				<h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Featured Projects</h2>
 				<p class="text-xl text-base-content/80 max-w-2xl mx-auto">Some of my recent work showcasing modern web technologies</p>
@@ -140,9 +205,9 @@ templ HomeBodyContent() {
 			</div>
 			
 			<div class="text-center">
-				<a href="/projects" class="btn btn-outline btn-lg btn-glow hover:btn-primary">View All Projects →</a>
+				<a href="#contact" class="btn btn-outline btn-lg btn-glow hover:btn-primary smooth-scroll">Get In Touch →</a>
 			</div>
-		</div>
+		</section>
 
 		<!-- Skills Section -->
 		<div class="py-20 relative overflow-hidden">
@@ -187,8 +252,8 @@ templ HomeBodyContent() {
 			</div>
 		</div>
 
-		<!-- CTA Section -->
-		<div class="py-20 hero-gradient">
+		<!-- Contact Section -->
+		<section id="contact" class="py-20 hero-gradient">
 			<div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
 				<h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Let's Build Something Together</h2>
 				<p class="text-xl text-base-content/90 mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -196,22 +261,22 @@ templ HomeBodyContent() {
 					Let's connect and create something amazing!
 				</p>
 				<div class="flex flex-col sm:flex-row gap-6 justify-center">
-					<a href="/about" class="btn btn-primary btn-lg btn-glow glow-primary">
-						<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-						</svg>
-						Get In Touch
-					</a>
-					<a href="mailto:gurbakhshish.singh@email.com" class="btn btn-outline btn-lg btn-glow hover:btn-primary">
+					<a href="mailto:gurbakhshish.singh@email.com" class="btn btn-primary btn-lg btn-glow glow-primary">
 						<svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
 							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
 							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
 						</svg>
 						Send Email
 					</a>
+					<a href="https://github.com/singh-gur" class="btn btn-outline btn-lg btn-glow hover:btn-primary" target="_blank">
+						<svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/>
+						</svg>
+						GitHub
+					</a>
 				</div>
 			</div>
-		</div>
+		</section>
 	</div>
 }
 
