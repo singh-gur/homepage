@@ -44,9 +44,13 @@ templ HomeBodyContent() {
 		<section id="home" class="hero min-h-screen hero-gradient pt-20">
 			<div class="hero-content text-center">
 				<div class="max-w-4xl relative z-10">
-					<div class="avatar mb-8 floating">
-						<div class="w-32 rounded-full ring-4 ring-primary glow-primary">
-							<img src="/static/images/profile.jpg" alt="Gurbakhshish Singh"/>
+					<div class="relative mb-12 profile-modern">
+						<div class="relative w-40 h-40 mx-auto">
+							<div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/10 rounded-2xl blur-sm"></div>
+							<div class="relative w-full h-full rounded-2xl overflow-hidden border border-base-300/20 bg-base-200/5 backdrop-blur-sm group">
+								<img src="/static/images/profile.png?v=3" alt="Gurbakhshish Singh" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"/>
+								<div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+							</div>
 						</div>
 					</div>
 					<h1 class="text-5xl md:text-7xl font-bold mb-6">

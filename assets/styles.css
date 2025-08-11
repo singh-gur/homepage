@@ -234,13 +234,37 @@ button:focus-visible {
   50% { background-position: 100% 50%; }
 }
 
-.floating {
-  animation: floating 3s ease-in-out infinite;
+/* Modern Profile Styling */
+.profile-modern {
+  animation: subtle-float 6s ease-in-out infinite;
 }
 
-@keyframes floating {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+@keyframes subtle-float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-8px); 
+  }
+}
+
+.profile-modern:hover {
+  transform: translateY(-4px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-modern .group {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.profile-modern .group:hover {
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(99, 102, 241, 0.1);
 }
 
 /* Smooth Scrolling */
