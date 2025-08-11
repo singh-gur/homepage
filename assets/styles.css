@@ -234,37 +234,42 @@ button:focus-visible {
   50% { background-position: 100% 50%; }
 }
 
-/* Modern Profile Styling */
-.profile-modern {
-  animation: subtle-float 6s ease-in-out infinite;
+/* Seamless Profile Styling */
+.profile-seamless {
+  animation: gentle-float 8s ease-in-out infinite;
 }
 
-@keyframes subtle-float {
+@keyframes gentle-float {
   0%, 100% { 
     transform: translateY(0px); 
   }
   50% { 
-    transform: translateY(-8px); 
+    transform: translateY(-12px); 
   }
 }
 
-.profile-modern:hover {
-  transform: translateY(-4px);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.profile-seamless:hover {
+  transform: translateY(-6px);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.profile-modern .group {
-  box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06),
-    0 0 0 1px rgba(255, 255, 255, 0.05);
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
 }
 
-.profile-modern .group:hover {
-  box-shadow: 
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04),
-    0 0 0 1px rgba(99, 102, 241, 0.1);
+/* Seamless image blending */
+.profile-seamless .group {
+  mask: radial-gradient(circle, black 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.4) 80%, transparent 100%);
+  -webkit-mask: radial-gradient(circle, black 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.4) 80%, transparent 100%);
+}
+
+.profile-seamless img {
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+.profile-seamless:hover img {
+  filter: contrast(1.15) brightness(1.1) saturate(1.15);
 }
 
 /* Smooth Scrolling */
