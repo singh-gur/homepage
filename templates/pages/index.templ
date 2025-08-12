@@ -13,7 +13,7 @@ templ HomeBodyContent() {
 	<div id="app">
 		<!-- Artistic Navigation Menu -->
 		<div class="fixed top-1/2 right-8 transform -translate-y-1/2 z-50">
-			<div class="flex flex-col gap-4">
+			<div class="flex flex-col gap-3">
 				<a href="#home" class="nav-bubble group smooth-scroll" title="Home">
 					<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
 						<path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
@@ -27,6 +27,16 @@ templ HomeBodyContent() {
 				<a href="#projects" class="nav-bubble group smooth-scroll" title="Projects">
 					<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
 						<path d="M3 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4ZM3 10a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6Zm10-1a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-2Z"/>
+					</svg>
+				</a>
+				<a href="#experience" class="nav-bubble group smooth-scroll" title="Experience">
+					<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm4-3a1 1 0 00-1 1v1h2V4a1 1 0 00-1-1zm4 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+					</svg>
+				</a>
+				<a href="#education" class="nav-bubble group smooth-scroll" title="Education">
+					<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+						<path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.612 2.524z"/>
 					</svg>
 				</a>
 				<a href="#contact" class="nav-bubble group smooth-scroll" title="Contact">
@@ -259,6 +269,163 @@ templ HomeBodyContent() {
 				</div>
 			</div>
 		</div>
+
+		<!-- Experience Section -->
+		<section id="experience" class="py-20 bg-base-200/30">
+			<div class="container mx-auto px-4 max-w-6xl">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Professional Experience</h2>
+					<p class="text-xl text-base-content/80 max-w-2xl mx-auto">My journey in software engineering and technology</p>
+				</div>
+				
+				<div class="max-w-4xl mx-auto">
+					<div class="space-y-12">
+						<!-- Experience Item 1 -->
+						<div class="card bg-base-100/50 backdrop-blur-sm shadow-xl border border-base-300/50">
+							<div class="card-body">
+								<div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+									<div>
+										<h3 class="text-2xl font-bold text-primary">Senior Software Engineer</h3>
+										<p class="text-lg font-semibold text-base-content/80">Tech Company Inc.</p>
+									</div>
+									<div class="text-right">
+										<p class="text-base-content/70 font-medium">2022 - Present</p>
+										<p class="text-base-content/60 text-sm">Full-time</p>
+									</div>
+								</div>
+								<ul class="space-y-2 text-base-content/80">
+									<li class="flex items-start gap-2">
+										<div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+										<span>Led development of microservices architecture using Go and Kubernetes</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+										<span>Improved system performance by 40% through optimization and caching strategies</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+										<span>Mentored junior developers and conducted technical interviews</span>
+									</li>
+								</ul>
+								<div class="flex flex-wrap gap-2 mt-4">
+									<div class="badge badge-primary badge-sm">Go</div>
+									<div class="badge badge-primary badge-sm">Kubernetes</div>
+									<div class="badge badge-primary badge-sm">Python</div>
+									<div class="badge badge-primary badge-sm">PostgreSQL</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Experience Item 2 -->
+						<div class="card bg-base-100/50 backdrop-blur-sm shadow-xl border border-base-300/50">
+							<div class="card-body">
+								<div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+									<div>
+										<h3 class="text-2xl font-bold text-secondary">Software Developer</h3>
+										<p class="text-lg font-semibold text-base-content/80">StartupXYZ</p>
+									</div>
+									<div class="text-right">
+										<p class="text-base-content/70 font-medium">2020 - 2022</p>
+										<p class="text-base-content/60 text-sm">Full-time</p>
+									</div>
+								</div>
+								<ul class="space-y-2 text-base-content/80">
+									<li class="flex items-start gap-2">
+										<div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+										<span>Developed and maintained web applications using JavaScript and Node.js</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+										<span>Collaborated with product team to deliver user-focused features</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+										<span>Implemented CI/CD pipelines and automated testing processes</span>
+									</li>
+								</ul>
+								<div class="flex flex-wrap gap-2 mt-4">
+									<div class="badge badge-secondary badge-sm">JavaScript</div>
+									<div class="badge badge-secondary badge-sm">Node.js</div>
+									<div class="badge badge-secondary badge-sm">React</div>
+									<div class="badge badge-secondary badge-sm">MongoDB</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Education Section -->
+		<section id="education" class="py-20">
+			<div class="container mx-auto px-4 max-w-6xl">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Education</h2>
+					<p class="text-xl text-base-content/80 max-w-2xl mx-auto">Academic background and continuous learning</p>
+				</div>
+				
+				<div class="max-w-4xl mx-auto">
+					<div class="space-y-8">
+						<!-- Education Item 1 -->
+						<div class="card bg-base-100/50 backdrop-blur-sm shadow-xl border border-base-300/50">
+							<div class="card-body">
+								<div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+									<div>
+										<h3 class="text-2xl font-bold text-accent">Bachelor of Computer Science</h3>
+										<p class="text-lg font-semibold text-base-content/80">University Name</p>
+									</div>
+									<div class="text-right">
+										<p class="text-base-content/70 font-medium">2016 - 2020</p>
+										<p class="text-base-content/60 text-sm">GPA: 3.8/4.0</p>
+									</div>
+								</div>
+								<div class="text-base-content/80 mb-4">
+									<p class="mb-3">Relevant Coursework:</p>
+									<div class="grid md:grid-cols-2 gap-2">
+										<span>• Data Structures & Algorithms</span>
+										<span>• Database Systems</span>
+										<span>• Software Engineering</span>
+										<span>• Web Development</span>
+										<span>• Operating Systems</span>
+										<span>• Computer Networks</span>
+									</div>
+								</div>
+								<div class="flex flex-wrap gap-2 mt-4">
+									<div class="badge badge-accent badge-sm">Computer Science</div>
+									<div class="badge badge-accent badge-sm">Software Engineering</div>
+									<div class="badge badge-accent badge-sm">Algorithms</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Certifications/Additional Learning -->
+						<div class="card bg-base-100/30 backdrop-blur-sm shadow-lg border border-base-300/30">
+							<div class="card-body">
+								<h3 class="text-xl font-bold text-base-content mb-4">Certifications & Continuous Learning</h3>
+								<div class="grid md:grid-cols-2 gap-4 text-base-content/80">
+									<div class="flex items-start gap-2">
+										<div class="w-2 h-2 bg-info rounded-full mt-2 flex-shrink-0"></div>
+										<span>AWS Certified Solutions Architect</span>
+									</div>
+									<div class="flex items-start gap-2">
+										<div class="w-2 h-2 bg-info rounded-full mt-2 flex-shrink-0"></div>
+										<span>Kubernetes Administrator (CKA)</span>
+									</div>
+									<div class="flex items-start gap-2">
+										<div class="w-2 h-2 bg-info rounded-full mt-2 flex-shrink-0"></div>
+										<span>Go Programming Specialist</span>
+									</div>
+									<div class="flex items-start gap-2">
+										<div class="w-2 h-2 bg-info rounded-full mt-2 flex-shrink-0"></div>
+										<span>Docker & Container Technology</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!-- Contact Section -->
 		<section id="contact" class="pt-20 pb-32 hero-gradient">
