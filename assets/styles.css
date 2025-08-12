@@ -336,3 +336,33 @@ section {
 [x-cloak] {
   display: none !important;
 }
+
+/* Artistic Navigation Bubbles */
+.nav-bubble {
+  @apply w-12 h-12 rounded-full flex items-center justify-center;
+  @apply bg-base-100/90 backdrop-blur-md border border-base-300/50;
+  @apply shadow-xl hover:shadow-2xl transition-all duration-300;
+  @apply text-base-content/70 hover:text-primary;
+  @apply hover:scale-110 hover:bg-primary/10;
+  @apply relative overflow-hidden;
+}
+
+.nav-bubble::before {
+  content: '';
+  @apply absolute inset-0 rounded-full;
+  @apply bg-gradient-to-r from-primary/0 to-secondary/0;
+  @apply transition-all duration-300 scale-0;
+}
+
+.nav-bubble:hover::before {
+  @apply scale-100 from-primary/20 to-secondary/20;
+}
+
+.nav-bubble svg {
+  @apply relative z-10 transition-transform duration-300;
+}
+
+.nav-bubble:hover svg {
+  @apply scale-110;
+}
+
