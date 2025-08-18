@@ -1,0 +1,75 @@
+package sections
+
+// EducationSection renders the education background and certifications
+templ EducationSection() {
+	<!-- Education Section -->
+	<section id="education" class="py-20">
+		<div class="container mx-auto px-4 max-w-6xl">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Education</h2>
+				<p class="text-xl text-base-content/80 max-w-2xl mx-auto">Academic background and continuous learning</p>
+			</div>
+			
+			<div class="max-w-4xl mx-auto">
+				<div class="space-y-8">
+					<!-- Education Item 1 -->
+					<div class="card bg-base-100/50 backdrop-blur-sm shadow-xl border border-base-300/50">
+						<div class="card-body">
+							<div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+								<div>
+									<h3 class="text-2xl font-bold text-accent">Bachelor of Computer Science</h3>
+									<p class="text-lg font-semibold text-base-content/80">University Name</p>
+								</div>
+								<div class="text-right">
+									<p class="text-base-content/70 font-medium">2016 - 2020</p>
+									<p class="text-base-content/60 text-sm">GPA: 3.8/4.0</p>
+								</div>
+							</div>
+							<div class="text-base-content/80 mb-4">
+								<p class="mb-3">Relevant Coursework:</p>
+								<div class="grid md:grid-cols-2 gap-2">
+									<span>• Data Structures & Algorithms</span>
+									<span>• Database Systems</span>
+									<span>• Software Engineering</span>
+									<span>• Web Development</span>
+									<span>• Operating Systems</span>
+									<span>• Computer Networks</span>
+								</div>
+							</div>
+							<div class="flex flex-wrap gap-2 mt-4">
+								<div class="badge badge-accent badge-sm">Computer Science</div>
+								<div class="badge badge-accent badge-sm">Software Engineering</div>
+								<div class="badge badge-accent badge-sm">Algorithms</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Certifications/Additional Learning -->
+					<div class="card bg-base-100/30 backdrop-blur-sm shadow-lg border border-base-300/30">
+						<div class="card-body">
+							<h3 class="text-xl font-bold text-base-content mb-4">Certifications & Continuous Learning</h3>
+							<div class="grid md:grid-cols-2 gap-4 text-base-content/80">
+								<div class="flex items-start gap-2">
+									<div class="w-2 h-2 bg-info rounded-full mt-2 flex-shrink-0"></div>
+									<span>AWS Certified Solutions Architect</span>
+								</div>
+								<div class="flex items-start gap-2">
+									<div class="w-2 h-2 bg-info rounded-full mt-2 flex-shrink-0"></div>
+									<span>Kubernetes Administrator (CKA)</span>
+								</div>
+								<div class="flex items-start gap-2">
+									<div class="w-2 h-2 bg-info rounded-full mt-2 flex-shrink-0"></div>
+									<span>Go Programming Specialist</span>
+								</div>
+								<div class="flex items-start gap-2">
+									<div class="w-2 h-2 bg-info rounded-full mt-2 flex-shrink-0"></div>
+									<span>Docker & Container Technology</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+}

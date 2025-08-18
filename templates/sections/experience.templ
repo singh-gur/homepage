@@ -1,0 +1,90 @@
+package sections
+
+// ExperienceSection renders the professional experience timeline
+templ ExperienceSection() {
+	<!-- Experience Section -->
+	<section id="experience" class="py-20 bg-base-200/30">
+		<div class="container mx-auto px-4 max-w-6xl">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Professional Experience</h2>
+				<p class="text-xl text-base-content/80 max-w-2xl mx-auto">My journey in software engineering and technology</p>
+			</div>
+			
+			<div class="max-w-4xl mx-auto">
+				<div class="space-y-12">
+					<!-- Experience Item 1 -->
+					<div class="card bg-base-100/50 backdrop-blur-sm shadow-xl border border-base-300/50">
+						<div class="card-body">
+							<div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+								<div>
+									<h3 class="text-2xl font-bold text-primary">Senior Software Engineer</h3>
+									<p class="text-lg font-semibold text-base-content/80">Tech Company Inc.</p>
+								</div>
+								<div class="text-right">
+									<p class="text-base-content/70 font-medium">2022 - Present</p>
+									<p class="text-base-content/60 text-sm">Full-time</p>
+								</div>
+							</div>
+							<ul class="space-y-2 text-base-content/80">
+								<li class="flex items-start gap-2">
+									<div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+									<span>Led development of microservices architecture using Go and Kubernetes</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+									<span>Improved system performance by 40% through optimization and caching strategies</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+									<span>Mentored junior developers and conducted technical interviews</span>
+								</li>
+							</ul>
+							<div class="flex flex-wrap gap-2 mt-4">
+								<div class="badge badge-primary badge-sm">Go</div>
+								<div class="badge badge-primary badge-sm">Kubernetes</div>
+								<div class="badge badge-primary badge-sm">Python</div>
+								<div class="badge badge-primary badge-sm">PostgreSQL</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Experience Item 2 -->
+					<div class="card bg-base-100/50 backdrop-blur-sm shadow-xl border border-base-300/50">
+						<div class="card-body">
+							<div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+								<div>
+									<h3 class="text-2xl font-bold text-secondary">Software Developer</h3>
+									<p class="text-lg font-semibold text-base-content/80">StartupXYZ</p>
+								</div>
+								<div class="text-right">
+									<p class="text-base-content/70 font-medium">2020 - 2022</p>
+									<p class="text-base-content/60 text-sm">Full-time</p>
+								</div>
+							</div>
+							<ul class="space-y-2 text-base-content/80">
+								<li class="flex items-start gap-2">
+									<div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+									<span>Developed and maintained web applications using JavaScript and Node.js</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+									<span>Collaborated with product team to deliver user-focused features</span>
+								</li>
+								<li class="flex items-start gap-2">
+									<div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+									<span>Implemented CI/CD pipelines and automated testing processes</span>
+								</li>
+							</ul>
+							<div class="flex flex-wrap gap-2 mt-4">
+								<div class="badge badge-secondary badge-sm">JavaScript</div>
+								<div class="badge badge-secondary badge-sm">Node.js</div>
+								<div class="badge badge-secondary badge-sm">React</div>
+								<div class="badge badge-secondary badge-sm">MongoDB</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+}
